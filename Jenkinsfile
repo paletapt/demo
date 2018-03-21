@@ -1,5 +1,4 @@
 node {
-stages {
 	stage 'Checkout'
 		checkout scm
 
@@ -8,5 +7,5 @@ stages {
 
 	stage 'Archive'
 		archive 'ProjectName/bin/Release/**'
-	}
+
 }
