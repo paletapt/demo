@@ -1,25 +1,12 @@
 node {
-    agent any    
-    stages {
-        stage('checkout') {
-          steps {
-            checkout([$class: 'GitSCM', ...])
-          }
-        }
-        stage('restore') {
-            steps {
-                bat 'dotnet restore --configfile NuGet.Config'
-            }
-        }
-        stage('build') {
-            steps {
-                bat 'dotnet build'
-            }
-        }
-        stage('publish') {
-            steps {
-              ...
-            }
-        }
-    }
+	stage 'Checkout'
+		checkout scm
+
+	stage 'Build'
+		bat 'nuget restore SolutionName.sln'
+		bat "\"${tool 'MSBuild'}\" ContactManager.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+
+	stage 'Archive'
+		archive 'ProjectName/bin/Release/**'
+
 }
