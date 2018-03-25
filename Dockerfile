@@ -9,7 +9,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-# Build runtime image 
+# Build runtime image   
 FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY --from=build-env /app/src/Fiver.Mvc.Testing/out .
