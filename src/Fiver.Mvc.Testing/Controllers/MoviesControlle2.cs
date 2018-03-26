@@ -10,11 +10,11 @@ using System.Linq;
 namespace Fiver.Mvc.Testing.Controllers
 {
     [Route("api/movies")]
-    public class MoviesController : BaseController
+    public class MoviesController3 : BaseController
     {
         private readonly IMovieService service;
 
-        public MoviesController(IMovieService service)
+        public MoviesController3(IMovieService service)
         {
             this.service = service;
         }
