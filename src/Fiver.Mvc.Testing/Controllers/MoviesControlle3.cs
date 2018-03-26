@@ -152,11 +152,14 @@ namespace Fiver.Mvc.Testing.Controllers
         private String a1(String model)
         {
            String aa="a";
-		   
+		   int t=0;
+		   t+=1;
             return aa;
         }
 		 private String a2(String model)
         {
+			  int t=0;
+		   t=+1;
             String aa="a";
             return aa;
         }
