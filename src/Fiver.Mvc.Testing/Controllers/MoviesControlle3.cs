@@ -149,25 +149,31 @@ namespace Fiver.Mvc.Testing.Controllers
             };
         }
         
-        private String aaaa(String model)
+        private String a1(String model)
         {
-            return "aaa";
+           String aa="a";
+		   
+            return aa;
         }
-		 private String aaaa(String model)
+		 private String a2(String model)
         {
-            return "aaa";
+            String aa="a";
+            return aa;
         }
-		 private String aaaa(String model)
+		 private String a3(String model)
         {
-            return "aaa";
+           String aa="a";
+            return aa;
         }
-		 private String aaaa(String model)
+		 private String a4(String model)
         {
-            return "aaa";
+           String aa="a";
+            return aa;
         }
-		 private String aaaa(String model)
+		 private String a5(String model)
         {
-            return "aaa";
+			String aa="a";
+            return aa;
         }
         #endregion
     }
